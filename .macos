@@ -158,10 +158,10 @@ defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 # Set language and text formats
 # Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
 # `Inches`, `en_GB` with `en_US`, and `true` with `false`.
-defaults write NSGlobalDomain AppleLanguages -array "en-US"
-defaults write NSGlobalDomain AppleLocale -string "en_US"
-defaults write NSGlobalDomain AppleMeasurementUnits -string "Inches"
-defaults write NSGlobalDomain AppleMetricUnits -bool false
+defaults write NSGlobalDomain AppleLanguages -array "en-US" "ja-JP"
+defaults write NSGlobalDomain AppleLocale -string "en_JP"
+defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
+defaults write NSGlobalDomain AppleMetricUnits -bool true
 
 # Show language menu in the top right corner of the boot screen
 sudo defaults write /Library/Preferences/com.apple.loginwindow showInputMenu -bool true
@@ -192,7 +192,7 @@ sudo pmset -a displaysleep 0
 sudo pmset -c sleep 0
 
 # Set machine sleep to 5 minutes on battery
-sudo pmset -b sleep 5
+sudo pmset -b sleep 2
 
 # Set standby delay to 24 hours (default is 1 hour)
 sudo pmset -a standbydelay 86400
@@ -426,9 +426,9 @@ defaults write com.apple.dock show-recents -bool false
 # Reset Launchpad, but keep the desktop wallpaper intact
 find "${HOME}/Library/Application Support/Dock" -name "*-*.db" -maxdepth 1 -delete
 
-# Add iOS & Watch Simulator to Launchpad
-sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app" "/Applications/Simulator.app"
-sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator (Watch).app" "/Applications/Simulator (Watch).app"
+# # Add iOS & Watch Simulator to Launchpad
+# sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator.app" "/Applications/Simulator.app"
+# sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator (Watch).app" "/Applications/Simulator (Watch).app"
 
 # Add a spacer to the left side of the Dock (where the applications are)
 #defaults write com.apple.dock persistent-apps -array-add '{tile-data={}; tile-type="spacer-tile";}'
@@ -627,52 +627,52 @@ sudo mdutil -E / > /dev/null
 # Only use UTF-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
 
-# Use a modified version of the Solarized Dark theme by default in Terminal.app
-osascript <<EOD
+# # Use a modified version of the Solarized Dark theme by default in Terminal.app
+# osascript <<EOD
 
-tell application "Terminal"
+# tell application "Terminal"
 
-	local allOpenedWindows
-	local initialOpenedWindows
-	local windowID
-	set themeName to "Solarized Dark xterm-256color"
+# 	local allOpenedWindows
+# 	local initialOpenedWindows
+# 	local windowID
+# 	set themeName to "Solarized Dark xterm-256color"
 
-	(* Store the IDs of all the open terminal windows. *)
-	set initialOpenedWindows to id of every window
+# 	(* Store the IDs of all the open terminal windows. *)
+# 	set initialOpenedWindows to id of every window
 
-	(* Open the custom theme so that it gets added to the list
-	   of available terminal themes (note: this will open two
-	   additional terminal windows). *)
-	do shell script "open '$HOME/init/" & themeName & ".terminal'"
+# 	(* Open the custom theme so that it gets added to the list
+# 	   of available terminal themes (note: this will open two
+# 	   additional terminal windows). *)
+# 	do shell script "open '$HOME/init/" & themeName & ".terminal'"
 
-	(* Wait a little bit to ensure that the custom theme is added. *)
-	delay 1
+# 	(* Wait a little bit to ensure that the custom theme is added. *)
+# 	delay 1
 
-	(* Set the custom theme as the default terminal theme. *)
-	set default settings to settings set themeName
+# 	(* Set the custom theme as the default terminal theme. *)
+# 	set default settings to settings set themeName
 
-	(* Get the IDs of all the currently opened terminal windows. *)
-	set allOpenedWindows to id of every window
+# 	(* Get the IDs of all the currently opened terminal windows. *)
+# 	set allOpenedWindows to id of every window
 
-	repeat with windowID in allOpenedWindows
+# 	repeat with windowID in allOpenedWindows
 
-		(* Close the additional windows that were opened in order
-		   to add the custom theme to the list of terminal themes. *)
-		if initialOpenedWindows does not contain windowID then
-			close (every window whose id is windowID)
+# 		(* Close the additional windows that were opened in order
+# 		   to add the custom theme to the list of terminal themes. *)
+# 		if initialOpenedWindows does not contain windowID then
+# 			close (every window whose id is windowID)
 
-		(* Change the theme for the initial opened terminal windows
-		   to remove the need to close them in order for the custom
-		   theme to be applied. *)
-		else
-			set current settings of tabs of (every window whose id is windowID) to settings set themeName
-		end if
+# 		(* Change the theme for the initial opened terminal windows
+# 		   to remove the need to close them in order for the custom
+# 		   theme to be applied. *)
+# 		else
+# 			set current settings of tabs of (every window whose id is windowID) to settings set themeName
+# 		end if
 
-	end repeat
+# 	end repeat
 
-end tell
+# end tell
 
-EOD
+# EOD
 
 # Enable “focus follows mouse” for Terminal.app and all X11 apps
 # i.e. hover over a window and start typing in it without clicking first
@@ -688,6 +688,10 @@ defaults write com.apple.Terminal ShowLineMarks -int 0
 
 # # Install the Solarized Dark theme for iTerm
 # open "${HOME}/init/Solarized Dark.itermcolors"
+# Install the Pastel Dark theme for iTerm
+open "${HOME}/init/Pastel Dark.itermcolors"
+# Install my keybindings for iTerm
+open "${HOME}/init/default.itermkeymap"
 
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
@@ -859,6 +863,7 @@ for app in "Activity Monitor" \
 	"Dock" \
 	"Finder" \
 	"Google Chrome" \
+	"iTerm2" \
 	"Mail" \
 	"Messages" \
 	"Photos" \
