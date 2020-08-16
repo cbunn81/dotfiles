@@ -1,0 +1,12 @@
+# Reasonable defaults for Python
+set tabsize 4
+set tabstospaces
+
+set linenumbers
+# Start at text when indented
+set atblanks
+set autoindent
+# Use a mouse
+set mouse
+# Smooth scrolling
+set smooth

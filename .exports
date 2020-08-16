@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
-# Make vim the default editor.
-export EDITOR='vim';
+# Make nano the default editor.
+export EDITOR='nano';
 
-# Enable persistent REPL history for `node`.
-export NODE_REPL_HISTORY=~/.node_history;
-# Allow 32³ entries; the default is 1000.
-export NODE_REPL_HISTORY_SIZE='32768';
-# Use sloppy mode by default, matching web browsers.
-export NODE_REPL_MODE='sloppy';
+# # Enable persistent REPL history for `node`.
+# export NODE_REPL_HISTORY=~/.node_history;
+# # Allow 32³ entries; the default is 1000.
+# export NODE_REPL_HISTORY_SIZE='32768';
+# # Use sloppy mode by default, matching web browsers.
+# export NODE_REPL_MODE='sloppy';
 
 # Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
 export PYTHONIOENCODING='UTF-8';
@@ -18,6 +18,8 @@ export HISTSIZE='32768';
 export HISTFILESIZE="${HISTSIZE}";
 # Omit duplicates and commands that begin with a space from history.
 export HISTCONTROL='ignoreboth';
+# Use iTerm session-based history files
+export HISTFILE=~/.bash_sessions/.bash_history-${ITERM_SESSION_ID}
 
 # Prefer US English and use UTF-8.
 export LANG='en_US.UTF-8';
@@ -35,3 +37,9 @@ export GPG_TTY=$(tty);
 
 # Hide the “default interactive shell is now zsh” warning on macOS.
 export BASH_SILENCE_DEPRECATION_WARNING=1;
+
+# Enable virtualenvwrapper for Python
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+export PROJECT_HOME=$HOME/projects
+source /usr/local/bin/virtualenvwrapper.sh

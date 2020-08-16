@@ -24,6 +24,8 @@ else # macOS `ls`
 	export LSCOLORS='BxBxhxDxfxhxhxhxhxcxcx'
 fi
 
+# List all files, including hidden files in long format and give sizes in KB,MB,etc.
+alias ll="ls -alh ${colorflag}"
 # List all files colorized in long format
 alias l="ls -lF ${colorflag}"
 
