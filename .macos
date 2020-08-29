@@ -863,7 +863,6 @@ for app in "Activity Monitor" \
 	"Dock" \
 	"Finder" \
 	"Google Chrome" \
-	"iTerm2" \
 	"Mail" \
 	"Messages" \
 	"Photos" \
