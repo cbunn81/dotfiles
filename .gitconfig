@@ -181,3 +181,6 @@
 [init]
 
 	defaultBranch = main
+
+[gpg]
+	program = gpg
