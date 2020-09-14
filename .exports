@@ -18,8 +18,15 @@ export HISTSIZE='32768';
 export HISTFILESIZE="${HISTSIZE}";
 # Omit duplicates and commands that begin with a space from history.
 export HISTCONTROL='ignoreboth';
-# Use iTerm session-based history files
-export HISTFILE=~/.bash_sessions/.bash_history-${ITERM_SESSION_ID}
+# Use iTerm session-based history files (macOS only)
+case "$(uname -s)" in
+    Darwin)
+        export HISTFILE=~/.zsh_sessions/.zsh_history-${ITERM_SESSION_ID}
+        ;;
+    Linux)
+        export HISTFILE=~/.zsh_history
+        ;;
+esac
 
 # Prefer US English and use UTF-8.
 export LANG='en_US.UTF-8';
@@ -40,9 +47,18 @@ export BASH_SILENCE_DEPRECATION_WARNING=1;
 
 # Enable virtualenvwrapper for Python
 export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 export PROJECT_HOME=$HOME/projects
-source /usr/local/bin/virtualenvwrapper.sh
+# Check OS to set paths correctly
+case "$(uname -s)" in
+    Darwin)
+        export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+        source /usr/local/bin/virtualenvwrapper.sh
+        ;;
+    Linux)
+        export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+        source /etc/bash_completion.d/virtualenvwrapper
+        ;;
+esac
 
 # For gnupg
 export GUILE_LOAD_PATH="/usr/local/share/guile/site/3.0"
