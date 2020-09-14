@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/cbunn/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -104,8 +104,6 @@ source $ZSH/oh-my-zsh.sh
 # From bash_profile
 ############################################
 
-# Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH";
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
@@ -115,47 +113,57 @@ for file in ~/.{path,exports,aliases,functions,extra}; do
 done;
 unset file;
 
-# shopt isn't in ZSH
-
+# shopt isn't in ZSH, use setopt
 # Case-insensitive globbing (used in pathname expansion)
-# shopt -s nocaseglob;
+setopt NO_CASE_GLOB
+# Extended globbing
+setopt EXTENDED_GLOB
+# Include hidden files in globbing
+setopt DOTGLOB
+# Automatically add "cd" if forgotten when entering a directory
+setopt AUTO_CD
+# share history across multiple zsh sessions
+setopt SHARE_HISTORY
+# append to history
+setopt APPEND_HISTORY
+# adds commands as they are typed, not at shell exit
+setopt INC_APPEND_HISTORY
+# expire duplicates first
+setopt HIST_EXPIRE_DUPS_FIRST 
+# do not store duplications
+# setopt HIST_IGNORE_DUPS
+#ignore duplicates when searching
+setopt HIST_FIND_NO_DUPS
+# removes blank lines from history
+setopt HIST_REDUCE_BLANKS
+# Correct spelling mistakes
+setopt CORRECT
+setopt CORRECT_ALL
 
-# Append to the Bash history file, rather than overwriting it
-# shopt -s histappend;
+# Remove bash completion, switched to ZSH
+# # Add tab completion for many Bash commands
+# if which brew &> /dev/null && [ -r "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]; then
+# 	# Ensure existing Homebrew v1 completions continue to work
+# 	export BASH_COMPLETION_COMPAT_DIR="$(brew --prefix)/etc/bash_completion.d";
+# 	source "$(brew --prefix)/etc/profile.d/bash_completion.sh";
+# elif [ -f /etc/bash_completion ]; then
+# 	source /etc/bash_completion;
+# fi;
 
-# Autocorrect typos in path names when using `cd`
-# shopt -s cdspell;
+# # Enable tab completion for `g` by marking it as an alias for `git`
+# if type _git &> /dev/null; then
+# 	complete -o default -o nospace -F _git g;
+# fi;
 
-# Enable some Bash 4 features when possible:
-# * `autocd`, e.g. `**/qux` will enter `./foo/bar/baz/qux`
-# * Recursive globbing, e.g. `echo **/*.txt`
-# for option in autocd globstar; do
-# 	shopt -s "$option" 2> /dev/null;
-# done;
+# # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
+# [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" scp sftp ssh;
 
-# Add tab completion for many Bash commands
-if which brew &> /dev/null && [ -r "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]; then
-	# Ensure existing Homebrew v1 completions continue to work
-	export BASH_COMPLETION_COMPAT_DIR="$(brew --prefix)/etc/bash_completion.d";
-	source "$(brew --prefix)/etc/profile.d/bash_completion.sh";
-elif [ -f /etc/bash_completion ]; then
-	source /etc/bash_completion;
-fi;
+# # Add tab completion for `defaults read|write NSGlobalDomain`
+# # You could just use `-g` instead, but I like being explicit
+# complete -W "NSGlobalDomain" defaults;
 
-# Enable tab completion for `g` by marking it as an alias for `git`
-if type _git &> /dev/null; then
-	complete -o default -o nospace -F _git g;
-fi;
-
-# Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
-[ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2- | tr ' ' '\n')" scp sftp ssh;
-
-# Add tab completion for `defaults read|write NSGlobalDomain`
-# You could just use `-g` instead, but I like being explicit
-complete -W "NSGlobalDomain" defaults;
-
-# Add `killall` tab completion for common apps
-complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
+# # Add `killall` tab completion for common apps
+# complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
 
 
 # ZSH stuff
