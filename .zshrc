@@ -144,7 +144,8 @@ setopt HIST_FIND_NO_DUPS
 setopt HIST_REDUCE_BLANKS
 # Correct spelling mistakes
 setopt CORRECT
-setopt CORRECT_ALL
+# Don't correct options or parameters
+# setopt CORRECT_ALL
 
 # Remove bash completion, switched to ZSH
 # # Add tab completion for many Bash commands
