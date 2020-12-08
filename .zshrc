@@ -146,6 +146,7 @@ setopt HIST_REDUCE_BLANKS
 setopt CORRECT
 # Don't correct options or parameters
 # setopt CORRECT_ALL
+unsetopt correctall
 
 # Remove bash completion, switched to ZSH
 # # Add tab completion for many Bash commands
