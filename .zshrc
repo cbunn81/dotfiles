@@ -142,14 +142,8 @@ setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_FIND_NO_DUPS
 # removes blank lines from history
 setopt HIST_REDUCE_BLANKS
-<<<<<<< HEAD
 # # Correct spelling mistakes
 # setopt CORRECT
-=======
-# Correct spelling mistakes
-setopt CORRECT
-# Don't correct options or parameters
->>>>>>> f3328f56487bde946e472efd890014f917555195
 # setopt CORRECT_ALL
 unsetopt correctall
 
