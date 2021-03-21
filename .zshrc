@@ -136,9 +136,10 @@ setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_FIND_NO_DUPS
 # removes blank lines from history
 setopt HIST_REDUCE_BLANKS
-# Correct spelling mistakes
-setopt CORRECT
-setopt CORRECT_ALL
+# # Correct spelling mistakes
+# setopt CORRECT
+# setopt CORRECT_ALL
+unsetopt correctall
 
 # Remove bash completion, switched to ZSH
 # # Add tab completion for many Bash commands
