@@ -63,8 +63,8 @@ secring.*
 # Vagrant
 .vagrant/
 
-# VS Code
-.vscode
+
+### VisualStudioCode ###
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -72,7 +72,9 @@ secring.*
 !.vscode/extensions.json
 *.code-workspace
 
-# Local History for Visual Studio Code
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+**/.history
 .history/
 
 # The extras for dotfiles
