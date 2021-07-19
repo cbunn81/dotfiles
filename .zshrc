@@ -135,7 +135,7 @@ setopt APPEND_HISTORY
 # adds commands as they are typed, not at shell exit
 setopt INC_APPEND_HISTORY
 # expire duplicates first
-setopt HIST_EXPIRE_DUPS_FIRST 
+setopt HIST_EXPIRE_DUPS_FIRST
 # do not store duplications
 # setopt HIST_IGNORE_DUPS
 #ignore duplicates when searching
@@ -184,7 +184,7 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # setup ssh-agent
 SSH_ENV=$HOME/.ssh/environment
-   
+
 # start the ssh-agent
 function start_agent {
     echo "Initializing new SSH agent..."
@@ -195,7 +195,7 @@ function start_agent {
     . "${SSH_ENV}" > /dev/null
     /usr/bin/ssh-add
 }
-   
+
 if [ -f "${SSH_ENV}" ]; then
      . "${SSH_ENV}" > /dev/null
      ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
@@ -204,3 +204,16 @@ if [ -f "${SSH_ENV}" ]; then
 else
     start_agent;
 fi
+
+### Fix slowness of pastes with zsh-syntax-highlighting.zsh
+pasteinit() {
+  OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
+  zle -N self-insert url-quote-magic # I wonder if you'd need `.url-quote-magic`?
+}
+
+pastefinish() {
+  zle -N self-insert $OLD_SELF_INSERT
+}
+zstyle :bracketed-paste-magic paste-init pasteinit
+zstyle :bracketed-paste-magic paste-finish pastefinish
+### Fix slowness of pastes
