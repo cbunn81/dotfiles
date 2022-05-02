@@ -6,110 +6,143 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "vitorgalvao/tiny-scripts"
+brew "ack"
+brew "ca-certificates"
+brew "autojump"
 brew "bash"
+brew "bash-completion@2"
 brew "freetype"
+brew "coreutils"
+brew "exiftool"
+brew "ffmpeg"
+brew "findutils"
 brew "gdrive"
 brew "ghostscript"
 brew "git"
+brew "git-lfs"
+brew "gnu-sed"
+brew "gnupg"
+brew "grep"
 brew "imagemagick"
 brew "keychain"
 brew "mas"
+brew "micro"
+brew "moreutils"
 brew "nano"
-brew "nativefier"
 brew "nmap"
+brew "p7zip"
 brew "pandoc"
+brew "pinentry-mac"
 brew "rclone"
 brew "rename"
 brew "rsync"
+brew "screen"
 brew "ssh-copy-id", link: true
 brew "syncthing", restart_service: true
 brew "syncthing-inotify", restart_service: true
+brew "tree"
+brew "vim"
 brew "wget"
 brew "youtube-dl"
+brew "yt-dlp"
+brew "zsh"
+brew "zsh-autosuggestions"
+brew "zsh-syntax-highlighting"
 brew "vitorgalvao/tiny-scripts/cask-repair"
-cask "adobe-creative-cloud"
-cask "alfred"
-cask "android-platform-tools"
-cask "applepi-baker"
-cask "atom"
-cask "avidemux"
+cask "adobe-creative-cloud", args: { appdir: "/Applications" }
+cask "alfred", args: { appdir: "/Applications" }
+cask "android-platform-tools", args: { appdir: "/Applications" }
+cask "applepi-baker", args: { appdir: "/Applications" }
+cask "atom", args: { appdir: "/Applications" }
+cask "avidemux", args: { appdir: "/Applications" }
 cask "backblaze"
 cask "balenaetcher"
-cask "cakebrew"
-cask "carbon-copy-cloner"
+cask "bitwarden"
 cask "cheatsheet"
-cask "day-o"
-cask "deluge"
-cask "dropbox"
-cask "dupeguru"
-cask "epubquicklook"
-cask "evernote"
-cask "firefox"
-cask "font-alegreya"
-cask "font-alegreya-sans"
-cask "font-bitter"
-cask "font-comic-neue"
-cask "font-lora"
+cask "day-o", args: { appdir: "/Applications" }
+cask "dbeaver-community"
+cask "docker"
+cask "dropbox", args: { appdir: "/Applications" }
+cask "dupeguru", args: { appdir: "/Applications" }
+cask "eloston-chromium"
+cask "epubquicklook", args: { appdir: "/Applications" }
+cask "evernote", args: { appdir: "/Applications" }
+cask "firefox", args: { appdir: "/Applications" }
+cask "font-alegreya", args: { appdir: "/Applications" }
+cask "font-alegreya-sans", args: { appdir: "/Applications" }
+cask "font-allura"
+cask "font-bitter", args: { appdir: "/Applications" }
+cask "font-comic-neue", args: { appdir: "/Applications" }
+cask "font-cormorant-garamond"
+cask "font-crimson-pro"
+cask "font-crimson-text"
+cask "font-dancing-script"
+cask "font-libre-baskerville"
+cask "font-lora", args: { appdir: "/Applications" }
+cask "font-marck-script"
+cask "font-nanum-myeongjo"
 cask "font-noto-sans"
 cask "font-noto-sans-cjk-jp"
 cask "font-open-sans"
-cask "font-oswald"
-cask "font-questrial"
-cask "font-roboto"
-cask "font-roboto-condensed"
+cask "font-oswald", args: { appdir: "/Applications" }
+cask "font-parisienne"
+cask "font-questrial", args: { appdir: "/Applications" }
+cask "font-quintessential"
+cask "font-roboto", args: { appdir: "/Applications" }
+cask "font-roboto-condensed", args: { appdir: "/Applications" }
 cask "font-rounded-mplus"
-cask "font-sniglet"
-cask "font-varela"
+cask "font-sniglet", args: { appdir: "/Applications" }
 cask "font-source-code-pro"
 cask "font-source-han-code-jp"
 cask "font-source-sans-pro"
 cask "font-source-serif-pro"
-cask "font-varela-round"
+cask "font-tangerine"
+cask "font-varela", args: { appdir: "/Applications" }
+cask "font-varela-round", args: { appdir: "/Applications" }
 cask "gitahead"
-cask "gitkraken"
-cask "google-backup-and-sync"
-cask "google-chrome"
-cask "google-earth-pro"
-cask "handbrake"
-cask "iterm2"
-cask "java8"
-cask "joplin"
-cask "karabiner-elements"
+cask "gitkraken", args: { appdir: "/Applications" }
+cask "google-chrome", args: { appdir: "/Applications" }
+cask "google-drive"
+cask "google-earth-pro", args: { appdir: "/Applications" }
+cask "handbrake", args: { appdir: "/Applications" }
+cask "iterm2", args: { appdir: "/Applications" }
+cask "karabiner-elements", args: { appdir: "/Applications" }
 cask "keepingyouawake"
 cask "keka"
-cask "libreelec-usb-sd-creator"
+cask "libreelec-usb-sd-creator", args: { appdir: "/Applications" }
 cask "libreoffice"
-cask "min"
+cask "mactex-no-gui"
+cask "min", args: { appdir: "/Applications" }
 cask "mkvtoolnix"
 cask "mos"
-cask "mp4tools"
-cask "omnidisksweeper"
-cask "qsyncthingtray"
-cask "quicklook-csv"
-cask "quicklook-json"
-cask "quicklookapk"
-cask "quicknfo"
+cask "mp4tools", args: { appdir: "/Applications" }
+cask "omnidisksweeper", args: { appdir: "/Applications" }
+cask "postman"
+cask "qsyncthingtray", args: { appdir: "/Applications" }
+cask "quicklook-csv", args: { appdir: "/Applications" }
+cask "quicklook-json", args: { appdir: "/Applications" }
+cask "quicklookapk", args: { appdir: "/Applications" }
+cask "quicknfo", args: { appdir: "/Applications" }
 cask "rectangle"
-cask "sdformatter"
-cask "skitch"
-cask "skyfonts"
-cask "soundflower"
-cask "sublime-text"
-cask "the-unarchiver"
-cask "tinymediamanager"
+cask "sdformatter", args: { appdir: "/Applications" }
+cask "skitch", args: { appdir: "/Applications" }
+cask "skyfonts", args: { appdir: "/Applications" }
+cask "soundflower", args: { appdir: "/Applications" }
+cask "sqlitestudio"
+cask "the-unarchiver", args: { appdir: "/Applications" }
+cask "tinymediamanager", args: { appdir: "/Applications" }
+cask "transmission-remote-gui"
 cask "trezor-bridge"
-cask "ubar"
-cask "unetbootin"
+cask "trezor-suite"
+cask "ubar", args: { appdir: "/Applications" }
+cask "unetbootin", args: { appdir: "/Applications" }
 cask "usb-overdrive"
-cask "vagrant"
-cask "vagrant-manager"
-cask "virtualbox"
-cask "vivaldi"
-cask "vlc"
+cask "virtualbox", args: { appdir: "/Applications" }
+cask "vlc", args: { appdir: "/Applications" }
 cask "vscodium"
-cask "webpquicklook"
-cask "wkhtmltopdf"
+cask "webpquicklook", args: { appdir: "/Applications" }
 mas "Disk Speed Test", id: 425264550
 mas "iMovie", id: 408981434
 mas "LINE", id: 539883307
+mas "Messenger", id: 1480068668
 mas "Pages", id: 409201541
