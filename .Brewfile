@@ -38,8 +38,8 @@ brew "rename"
 brew "rsync"
 brew "screen"
 brew "ssh-copy-id", link: true
+brew "svn"
 brew "syncthing", restart_service: true
-brew "syncthing-inotify", restart_service: true
 brew "tree"
 brew "vim"
 brew "wget"
@@ -65,7 +65,6 @@ cask "docker"
 cask "dropbox", args: { appdir: "/Applications" }
 cask "dupeguru", args: { appdir: "/Applications" }
 cask "eloston-chromium"
-cask "epubquicklook", args: { appdir: "/Applications" }
 cask "evernote", args: { appdir: "/Applications" }
 cask "firefox", args: { appdir: "/Applications" }
 cask "font-alegreya", args: { appdir: "/Applications" }
@@ -89,11 +88,9 @@ cask "font-parisienne"
 cask "font-questrial", args: { appdir: "/Applications" }
 cask "font-quintessential"
 cask "font-roboto", args: { appdir: "/Applications" }
-cask "font-roboto-condensed", args: { appdir: "/Applications" }
 cask "font-rounded-mplus"
 cask "font-sniglet", args: { appdir: "/Applications" }
 cask "font-source-code-pro"
-cask "font-source-han-code-jp"
 cask "font-source-sans-pro"
 cask "font-source-serif-pro"
 cask "font-tangerine"
@@ -127,7 +124,7 @@ cask "rectangle"
 cask "sdformatter", args: { appdir: "/Applications" }
 cask "skitch", args: { appdir: "/Applications" }
 cask "skyfonts", args: { appdir: "/Applications" }
-cask "soundflower", args: { appdir: "/Applications" }
+# cask "soundflower", args: { appdir: "/Applications" }
 cask "sqlitestudio"
 cask "the-unarchiver", args: { appdir: "/Applications" }
 cask "tinymediamanager", args: { appdir: "/Applications" }
