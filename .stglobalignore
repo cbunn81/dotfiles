@@ -12,6 +12,12 @@
 // git repos - syncing would interfere with normal git operations
 .git
 
+// Node.js Dependency directories
+node_modules/
+
+// Python Byte-compiled / optimized / DLL files
+__pycache__/
+
 // OS-generated files (linux)
 .directory
 .Trash-*
