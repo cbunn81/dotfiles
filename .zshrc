@@ -222,3 +222,8 @@ zstyle :bracketed-paste-magic paste-finish pastefinish
 # For NVM (Node Version Manager)
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# For pyenv - Useful for running several version of Python simultaneously
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+pyenv virtualenvwrapper_lazy

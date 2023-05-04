@@ -46,6 +46,8 @@ export GPG_TTY=$(tty);
 export BASH_SILENCE_DEPRECATION_WARNING=1;
 
 # Enable virtualenvwrapper for Python
+export PYENV_ROOT="$HOME/.pyenv"
+export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/projects
 # Check OS to set paths correctly
