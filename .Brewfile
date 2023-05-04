@@ -12,7 +12,6 @@ tap "vitorgalvao/tiny-scripts"
 brew "ack"
 brew "agg"
 brew "ca-certificates"
-brew "python@3.10"
 brew "asciinema"
 brew "gmp"
 brew "coreutils"
@@ -24,7 +23,7 @@ brew "bash"
 brew "bash-completion@2"
 brew "freetype"
 brew "glib"
-brew "python@3.9"
+brew "duti"
 brew "exiftool"
 brew "harfbuzz"
 brew "ffmpeg"
@@ -37,7 +36,6 @@ brew "git-lfs"
 brew "gnu-sed"
 brew "gnupg"
 brew "grep"
-brew "python@3.8"
 brew "imagemagick"
 brew "keychain"
 brew "latexindent"
@@ -51,12 +49,15 @@ brew "nano"
 brew "nmap"
 brew "nvm"
 brew "p7zip"
-brew "pandoc", link: false
+brew "pandoc"
 brew "php"
 brew "zopfli"
 brew "pigz"
 brew "pinentry-mac"
 brew "pv"
+brew "pyenv"
+brew "pyenv-virtualenv"
+brew "pyenv-virtualenvwrapper"
 brew "rclone"
 brew "rename"
 brew "rlwrap"
@@ -64,10 +65,10 @@ brew "rsync"
 brew "screen"
 brew "ssh-copy-id"
 brew "syncthing", restart_service: true
-brew "syncthing-inotify", restart_service: true
 brew "tree"
 brew "vbindiff"
 brew "vim"
+brew "virtualenvwrapper"
 brew "wget"
 brew "woff2"
 brew "youtube-dl"
@@ -100,7 +101,6 @@ cask "dropbox", args: { appdir: "/Applications" }
 cask "dupeguru", args: { appdir: "/Applications" }
 cask "electorrent"
 cask "eloston-chromium"
-cask "epubquicklook", args: { appdir: "/Applications" }
 cask "evernote", args: { appdir: "/Applications" }
 cask "firefox", args: { appdir: "/Applications" }
 cask "font-alegreya", args: { appdir: "/Applications" }
@@ -112,11 +112,14 @@ cask "font-cormorant-garamond"
 cask "font-crimson-pro"
 cask "font-crimson-text"
 cask "font-dancing-script"
+cask "font-fontawesome"
 cask "font-libre-baskerville"
 cask "font-libre-caslon-display"
 cask "font-libre-caslon-text"
 cask "font-lora", args: { appdir: "/Applications" }
 cask "font-marck-script"
+cask "font-meslo-for-powerline"
+cask "font-meslo-lg-nerd-font"
 cask "font-nanum-myeongjo"
 cask "font-noto-sans"
 cask "font-noto-sans-cjk-jp"
@@ -126,11 +129,9 @@ cask "font-parisienne"
 cask "font-questrial", args: { appdir: "/Applications" }
 cask "font-quintessential"
 cask "font-roboto", args: { appdir: "/Applications" }
-cask "font-roboto-condensed", args: { appdir: "/Applications" }
 cask "font-rounded-mplus"
 cask "font-sniglet", args: { appdir: "/Applications" }
 cask "font-source-code-pro"
-cask "font-source-han-code-jp"
 cask "font-source-sans-pro"
 cask "font-source-serif-pro"
 cask "font-tangerine"
@@ -182,9 +183,6 @@ cask "unetbootin", args: { appdir: "/Applications" }
 cask "usb-overdrive"
 cask "vagrant", args: { appdir: "/Applications" }
 cask "vagrant-manager", args: { appdir: "/Applications" }
-cask "virtualbox-extension-pack"
-# "virtualbox6" is used for Mojave. For recent macOS, use "virtualbox"
-# cask "virtualbox6"
 cask "virtualbox", args: { appdir: "/Applications" }
 cask "vivaldi", args: { appdir: "/Applications" }
 cask "vlc", args: { appdir: "/Applications" }
