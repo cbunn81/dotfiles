@@ -1,10 +1,12 @@
-# Reasonable defaults for Python
-set tabsize 4
-set tabstospaces
-
-set linenumbers
 # Start at text when indented
 set atblanks
 set autoindent
+
+set linenumbers
+
 # Use a mouse
 set mouse
+
+# Reasonable defaults for Python
+set tabsize 4
+set tabstospaces
