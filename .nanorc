@@ -8,5 +8,3 @@ set atblanks
 set autoindent
 # Use a mouse
 set mouse
-# Smooth scrolling
-set smooth
