@@ -185,6 +185,5 @@
 [gpg]
 	program = gpg
 
-[user]
-	name = Christopher Bunn
-	email = github@thenerdery.org
+# Don't include user name and email here, use .extra
+# Otherwise, someone cloning the repo could appear commit as you
