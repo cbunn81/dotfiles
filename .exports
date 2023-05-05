@@ -58,7 +58,7 @@ case "$(uname -s)" in
         ;;
     Linux)
         export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-        source /etc/bash_completion.d/virtualenvwrapper
+        source /usr/local/bin/virtualenvwrapper.sh
         ;;
 esac
 
