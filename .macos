@@ -694,8 +694,10 @@ defaults write com.apple.Terminal ShowLineMarks -int 0
 # open "${HOME}/init/Solarized Dark.itermcolors"
 # Install the Pastel Dark theme for iTerm
 open "${HOME}/init/Pastel Dark.itermcolors"
+# Install the One Dark theme for iTerm
+open "${HOME}/init/One Dark.itermcolors"
 # Install my keybindings for iTerm
-open "${HOME}/init/default.itermkeymap"
+# open "${HOME}/init/default.itermkeymap"
 
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
