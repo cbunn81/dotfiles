@@ -116,6 +116,10 @@ defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 #rm -rf ~/Library/Application Support/Dock/desktoppicture.db
 #sudo rm -rf /System/Library/CoreServices/DefaultDesktop.jpg
 #sudo ln -s /path/to/your/image /System/Library/CoreServices/DefaultDesktop.jpg
+# The above won't work as well in later versions of macOS, both because the /System
+# is not read/write anymore, and because HEIC images are used by default.
+# Instead, update the value in the settings database (requires Dock to be restarted):
+sqlite3 ~/Library/Application\ Support/Dock/desktoppicture.db "update data set value = '/System/Library/Desktop Pictures/Solid Colors/Stone.png'"
 
 ###############################################################################
 # Trackpad, mouse, keyboard, Bluetooth accessories, and input                 #
