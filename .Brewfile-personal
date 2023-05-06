@@ -1,0 +1,54 @@
+# Brewfile for personal-only formulae
+tap "aws/tap"
+tap "bramstein/webfonttools"
+tap "homebrew/cask-drivers"
+tap "homebrew/cask-versions"
+brew "asciinema"
+brew "atomicparsley"
+brew "awscli"
+brew "gifsicle"
+# brew "php"
+brew "woff2"
+# brew "youtube-dl"
+brew "yt-dlp"
+brew "aws/tap/aws-sam-cli"
+brew "bramstein/webfonttools/sfnt2woff"
+brew "bramstein/webfonttools/sfnt2woff-zopfli"
+cask "adobe-creative-cloud", args: { appdir: "/Applications" }
+cask "android-platform-tools", args: { appdir: "/Applications" }
+cask "applepi-baker", args: { appdir: "/Applications" }
+# cask "atom", args: { appdir: "/Applications" }
+cask "avidemux", args: { appdir: "/Applications" }
+cask "backblaze"
+cask "burn"
+cask "carbon-copy-cloner"
+# cask "deluge", args: { appdir: "/Applications" }
+cask "dropbox", args: { appdir: "/Applications" }
+# cask "electorrent"
+cask "eloston-chromium"
+cask "evernote", args: { appdir: "/Applications" }
+cask "google-earth-pro", args: { appdir: "/Applications" }
+cask "handbrake", args: { appdir: "/Applications" }
+cask "joplin"
+cask "karabiner-elements", args: { appdir: "/Applications" }
+cask "libreelec-usb-sd-creator", args: { appdir: "/Applications" }
+cask "mactex-no-gui"
+cask "microsoft-teams"
+cask "min", args: { appdir: "/Applications" }
+cask "mkvtoolnix"
+cask "mp4tools", args: { appdir: "/Applications" }
+cask "notion"
+cask "soundflower", args: { appdir: "/Applications" }
+cask "sublime-text", args: { appdir: "/Applications" }
+cask "tinymediamanager", args: { appdir: "/Applications" }
+cask "transmission-remote-gui"
+cask "trezor-bridge"
+cask "trezor-suite"
+cask "unetbootin", args: { appdir: "/Applications" }
+# cask "vagrant", args: { appdir: "/Applications" }
+# cask "vagrant-manager", args: { appdir: "/Applications" }
+# cask "vivaldi", args: { appdir: "/Applications" }
+cask "zoom"
+mas "iMovie", id: 408981434
+mas "LINE", id: 539883307
+mas "Messenger", id: 1480068668
