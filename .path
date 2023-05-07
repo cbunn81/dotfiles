@@ -3,7 +3,7 @@ PATH="/usr/local/bin:~/bin:$HOME/bin:$PATH"
 # Check OS to set paths correctly
 case "$(uname -s)" in
     Darwin)
-        PATH="/usr/local/texlive/2021/bin/universal-darwin:$PATH"
+        PATH="/opt/homebrew/bin/:/opt/homebrew/sbin/:/usr/local/texlive/2021/bin/universal-darwin:$PATH"
 esac
 
 export PATH
