@@ -1,25 +1,18 @@
 # Brewfile common to all installs
-tap "aws/tap"
-tap "bramstein/webfonttools"
 tap "clintmod/formulas"
 tap "homebrew/bundle"
 tap "homebrew/cask"
-tap "homebrew/cask-drivers"
 tap "homebrew/cask-fonts"
-tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "vitorgalvao/tiny-scripts"
 brew "ack"
 brew "agg"
 brew "ca-certificates"
-brew "asciinema"
 brew "gmp"
 brew "coreutils"
 brew "asdf"
-brew "atomicparsley"
 brew "autojump"
-brew "awscli"
 brew "bash"
 brew "bash-completion@2"
 brew "freetype"
@@ -31,7 +24,6 @@ brew "ffmpeg"
 brew "findutils"
 brew "gdrive"
 brew "ghostscript"
-brew "gifsicle"
 brew "git"
 brew "git-lfs"
 brew "gnu-sed"
@@ -52,7 +44,6 @@ brew "nvm"
 brew "p7zip"
 brew "pam-reattach"
 brew "pandoc"
-brew "php"
 brew "zopfli"
 brew "pigz"
 brew "pinentry-mac"
@@ -72,38 +63,19 @@ brew "vbindiff"
 brew "vim"
 brew "virtualenvwrapper"
 brew "wget"
-brew "woff2"
-brew "youtube-dl"
-brew "yt-dlp"
 brew "zsh"
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
-brew "aws/tap/aws-sam-cli"
-brew "bramstein/webfonttools/sfnt2woff"
-brew "bramstein/webfonttools/sfnt2woff-zopfli"
 brew "clintmod/formulas/macprefs"
 brew "vitorgalvao/tiny-scripts/cask-repair"
-cask "adobe-creative-cloud", args: { appdir: "/Applications" }
 cask "alfred", args: { appdir: "/Applications" }
-cask "android-platform-tools", args: { appdir: "/Applications" }
-cask "applepi-baker", args: { appdir: "/Applications" }
-cask "atom", args: { appdir: "/Applications" }
-cask "avidemux", args: { appdir: "/Applications" }
-cask "backblaze"
 cask "balenaetcher"
 cask "bitwarden"
-cask "burn"
-cask "carbon-copy-cloner"
 cask "cheatsheet"
 cask "day-o", args: { appdir: "/Applications" }
 cask "dbeaver-community"
-cask "deluge", args: { appdir: "/Applications" }
 cask "docker"
-cask "dropbox", args: { appdir: "/Applications" }
 cask "dupeguru", args: { appdir: "/Applications" }
-cask "electorrent"
-cask "eloston-chromium"
-cask "evernote", args: { appdir: "/Applications" }
 cask "firefox", args: { appdir: "/Applications" }
 cask "font-alegreya", args: { appdir: "/Applications" }
 cask "font-alegreya-sans", args: { appdir: "/Applications" }
@@ -143,22 +115,11 @@ cask "gitahead"
 cask "gitkraken", args: { appdir: "/Applications" }
 cask "google-chrome", args: { appdir: "/Applications" }
 cask "google-drive"
-cask "google-earth-pro", args: { appdir: "/Applications" }
-cask "handbrake", args: { appdir: "/Applications" }
 cask "iterm2", args: { appdir: "/Applications" }
-cask "joplin"
-cask "karabiner-elements", args: { appdir: "/Applications" }
 cask "keepingyouawake"
 cask "keka"
-cask "libreelec-usb-sd-creator", args: { appdir: "/Applications" }
 cask "libreoffice"
-cask "mactex-no-gui"
-cask "microsoft-teams"
-cask "min", args: { appdir: "/Applications" }
-cask "mkvtoolnix"
 cask "mos"
-cask "mp4tools", args: { appdir: "/Applications" }
-cask "notion"
 cask "omnidisksweeper", args: { appdir: "/Applications" }
 cask "postman"
 cask "qsyncthingtray", args: { appdir: "/Applications" }
@@ -172,27 +133,13 @@ cask "simplenote"
 cask "skitch", args: { appdir: "/Applications" }
 cask "skyfonts", args: { appdir: "/Applications" }
 cask "slack"
-cask "soundflower", args: { appdir: "/Applications" }
 cask "sqlitestudio"
-cask "sublime-text", args: { appdir: "/Applications" }
 cask "the-unarchiver", args: { appdir: "/Applications" }
-cask "tinymediamanager", args: { appdir: "/Applications" }
-cask "transmission-remote-gui"
-cask "trezor-bridge"
-cask "trezor-suite"
 cask "ubar", args: { appdir: "/Applications" }
-cask "unetbootin", args: { appdir: "/Applications" }
 cask "usb-overdrive"
-cask "vagrant", args: { appdir: "/Applications" }
-cask "vagrant-manager", args: { appdir: "/Applications" }
 cask "virtualbox", args: { appdir: "/Applications" }
-cask "vivaldi", args: { appdir: "/Applications" }
 cask "vlc", args: { appdir: "/Applications" }
 cask "vscodium"
 cask "webpquicklook", args: { appdir: "/Applications" }
-cask "zoom"
 mas "Disk Speed Test", id: 425264550
-mas "iMovie", id: 408981434
-mas "LINE", id: 539883307
-mas "Messenger", id: 1480068668
 mas "Pages", id: 409201541
