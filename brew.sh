@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 # Install Homebrew, which will prompt to install command-line tools if missing.
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# Instead, use Strap: https://strap.mikemcquaid.com/
+# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Make sure we’re using the latest Homebrew.
 brew update
