@@ -1,9 +1,7 @@
 # Brewfile common to all installs
 tap "clintmod/formulas"
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/cask-fonts"
-tap "homebrew/core"
 tap "homebrew/services"
 tap "vitorgalvao/tiny-scripts"
 brew "ack"
