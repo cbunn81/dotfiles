@@ -1,0 +1,199 @@
+configure_dotfiles: true
+configure_terminal: true
+configure_osx: true
+
+dotfiles_repo: https://github.com/cbunn81/dotfiles
+dotfiles_repo_accept_hostkey: true
+dotfiles_repo_local_destination: ~/dotfiles
+dotfiles_repo_version: master # Replace with your default branch
+dotfiles_home: "~"
+dotfiles_files:
+  - .aliases
+  - .curlrc
+  - .editorconfig
+  - .exports
+  - .functions
+  - .gitconfig
+  - .gitignore
+  - .inputrc
+  - .macos
+  - .nanorc
+  - .path
+  - .screenrc
+  - .stglobalignore
+  - .tmux.conf
+  - .vimrc
+  - .wgetrc
+  - .zshrc
+
+homebrew_installed_packages:
+  # - ansible # Installed via Pip.
+  - ack
+  - agg
+  - asdf
+  - autojump
+  - bash
+  - bash-completion@2
+  - ca-certificates
+  - cairo
+  - cask-repair
+  - coreutils
+  - duti
+  - exiftool
+  - ffmpeg
+  - findutils
+  - freetype
+  - fzf
+  - gdrive
+  - ghostscript
+  - git
+  - git-lfs
+  - glib
+  - gnu-sed
+  - gnupg
+  - go
+  - graphicsmagick
+  - grep
+  - imagemagick
+  - jpeg
+  - keychain
+  - latexindent
+  - libpng
+  - librsvg
+  - lua
+  - lynx
+  - macprefs
+  - mark
+  - mas
+  - micro
+  - moreutils
+  - nano
+  - nmap
+  - nvm
+  - p7zip
+  - pam-reattach
+  - pandoc
+  - pigz
+  - pinentry-mac
+  - pkgconf
+  - pv
+  - pyenv
+  - pyenv-virtualenv
+  - pyenv-virtualenvwrapper
+  - rclone
+  - rename
+  - rsync
+  - screen
+  - sqlite
+  - ssh-copy-id
+  - syncthing
+  - tree
+  - vim
+  - virtualenvwrapper
+  - wget
+  - zsh
+  - zsh-autosuggestions
+  - zsh-syntax-highlighting
+
+homebrew_taps:
+  - bramstein/webfonttools
+  - clintmod/formulas
+  - homebrew/bundle
+  - homebrew/cask-drivers
+  - homebrew/cask-fonts
+  - homebrew/cask-versions
+  - homebrew/services
+  - vitorgalvao/tiny-scripts
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - adobe-creative-cloud
+  - alfred
+  - applepi-baker
+  - backblaze
+  - balenaetcher
+  - bitwarden
+  - day-o
+  - dropbox
+  - dupeguru
+  - eloston-chromium
+  - firefox
+  - font-alegreya
+  - font-alegreya-sans
+  - font-allura
+  - font-bitter
+  - font-comic-neue
+  - font-cormorant-garamond
+  - font-crimson-pro
+  - font-crimson-text
+  - font-dancing-script
+  - font-fontawesome
+  - font-libre-baskerville
+  - font-libre-caslon-display
+  - font-libre-caslon-text
+  - font-lora
+  - font-marck-script
+  - font-meslo-for-powerline
+  - font-meslo-lg-nerd-font
+  - font-nanum-myeongjo
+  - font-noto-sans
+  - font-noto-sans-cjk-jp
+  - font-open-sans
+  - font-oswald
+  - font-parisienne
+  - font-questrial
+  - font-quintessential
+  - font-roboto
+  - font-rounded-m+
+  - font-sniglet
+  - font-source-code-pro
+  - font-source-han-sans
+  - font-source-sans-pro
+  - font-source-serif-pro
+  - font-tangerine
+  - font-varela
+  - font-varela-round
+  - gitahead
+  - gitkraken
+  - google-chrome
+  - google-drive
+  - iterm2
+  - keepingyouawake
+  - keka
+  - libreoffice
+  - mactex-no-gui
+  - meetingbar
+  - microsoft-auto-update
+  - microsoft-teams
+  - min
+  - mos
+  - obsidian
+  - omnidisksweeper
+  - private-internet-access
+  - qsyncthingtray
+  - quicklook-csv
+  - quicklook-json
+  - quicklookapk
+  - quicknfo
+  - rectangle
+  - skitch
+  - skyfonts
+  - soundflower
+  - stats
+  - the-unarchiver
+  - tinymediamanager
+  - transmission-remote-gui
+  - trezor-bridge
+  - trezor-suite
+  - ubar
+  - unetbootin
+  - usb-overdrive
+  - utm
+  - vlc
+  - vscodium
+  - webpquicklook
+
+osx_script: "~/.macos --no-restart"
+
+# Glob pattern to ansible task files to run after all other tasks are finished.
+post_provision_tasks: []
