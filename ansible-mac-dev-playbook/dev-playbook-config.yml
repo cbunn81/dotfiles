@@ -98,11 +98,6 @@ homebrew_installed_packages:
 homebrew_taps:
   - bramstein/webfonttools
   - clintmod/formulas
-  - homebrew/bundle
-  - homebrew/cask-drivers
-  - homebrew/cask-fonts
-  - homebrew/cask-versions
-  - homebrew/services
   - vitorgalvao/tiny-scripts
 
 homebrew_cask_appdir: /Applications
