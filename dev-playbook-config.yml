@@ -155,7 +155,7 @@ homebrew_cask_apps:
   - keepingyouawake
   - keka
   - libreoffice
-  - mactex-no-gui
+  #  - mactex-no-gui
   - meetingbar
   - microsoft-auto-update
   - microsoft-teams
@@ -163,7 +163,7 @@ homebrew_cask_apps:
   - mos
   - obsidian
   - omnidisksweeper
-  - private-internet-access
+  #  - private-internet-access
   - qsyncthingtray
   - quicklook-csv
   - quicklook-json
