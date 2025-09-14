@@ -1,0 +1,11 @@
+---
+- name: Clone Oh-My-ZSH
+  ansible.builtin.git:
+    repo: "https://github.com/ohmyzsh/ohmyzsh.git"
+    dest: "~/.oh-my-zsh"
+
+- name: Install PowerLevel10K
+  ansible.builtin.git:
+    repo: "https://github.com/romkatv/powerlevel10k.git"
+    dest: "~/.oh-my-zsh/custom/themes/powerlevel10k"
+    depth: 1

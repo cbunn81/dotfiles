@@ -18,6 +18,7 @@ dotfiles_files:
   - .inputrc
   - .macos
   - .nanorc
+  - .p10k.zsh
   - .path
   - .screenrc
   - .stglobalignore
@@ -186,4 +187,5 @@ homebrew_cask_apps:
 osx_script: "~/.macos --no-restart"
 
 # Glob pattern to ansible task files to run after all other tasks are finished.
-post_provision_tasks: []
+post_provision_tasks:
+  - oh-my-zsh.yml
